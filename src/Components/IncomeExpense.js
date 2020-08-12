@@ -2,7 +2,6 @@ import React,{useContext} from 'react'
 import {
      CardContent
     } from '@material-ui/core/';
-import 'fontsource-roboto';
 import {GlobalContext} from '../Context/GlobalState';
 
 

@@ -1,10 +1,8 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../Context/GlobalState';
-import { useAlert } from 'react-alert'
 
 export const AddTransaction = () => {
 
-    const alert = useAlert();
 
     const {addTransaction} = useContext(GlobalContext);
 
@@ -13,23 +11,6 @@ export const AddTransaction = () => {
 
     const submit = (e) => {
        e.preventDefault();
-
-       if(!text && !amount){
-           return(
-               alert.show("Fields required !! ")
-           )
-       }
-
-       if(!text){
-         return (
-             alert.show("Text Field Required !! ")
-         )
-       }
-       if (!amount) {
-           return (
-               alert.show("Amount Required !!")
-           )
-      }
 
         const newTransaction = {  
                 id: Math.floor(Math.random() * 100000),
