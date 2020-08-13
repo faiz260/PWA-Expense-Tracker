@@ -7,12 +7,13 @@ import {AddTransaction} from './Components/AddTransactions'
 import {Footer} from './Components/footer'
 import './App.css';
 import Container from '@material-ui/core/Container';
-
+import { configureNotification } from "./Service/firebase-service";
 import {GlobalProvider} from './Context/GlobalState'
 
 function App() {
   return (
     <GlobalProvider>
+      {configureNotification()}
       <Header/>
       <Container maxWidth="sm">
         <Balance/>
